@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cally Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .profile-card {
+      width: 350px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    .profile-header {
+      text-align: center;
+    }
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .profile-name {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .profile-info {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
+    .profile-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .profile-actions button {
+      flex: 1;
+      margin: 0 5px;
+    }
+    .section-header {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+    .description {
+      font-size: 0.85rem;
+      color: #6c757d;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-header">
+      <img src="data:image/jpeg;base64,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" alt="Profile" class="profile-img">
+      <div class="profile-name">Cailly Junity</div>
+      <div class="profile-info">Alger, IT | Jamalleyised</div>
+      <div class="profile-info">Business Professional</div>
+    </div>
+    <div class="profile-actions">
+      <button class="btn btn-outline-primary">Emrrend</button>
+      <button class="btn btn-outline-secondary">Fitura</button>
+    </div>
+    <div class="section-header">Description</div>
+    <div class="description">
+      This letter of title field as finalist the index that to or about ser to and your exsenitur will margassilt. 
+      The mrole thed dnens sort thot car tails, thore positioned oon tile differnts. Business.
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
